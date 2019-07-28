@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "css/world.css" %}">
+  </head>
+  <body class=addworld align="center">
+   <div>
+    <h1>ADD MATCHES</h1>
+    <form method="POST">
+      {{form.as_p}}
+      {% csrf_token %}
+      <input type="submit",value="Add Match">
+    </form>
+   </div>
+  </body>
+</html>

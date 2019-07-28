@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static "css/world.css" %}">
+  </head>
+  <body align ="center" class="model">
+  <h1>WORLD CUP 2019 RESULT</h1>
+  {% if match_list %}
+      <table border='2' align="center">
+        <tr>
+          <th>Country1</th>
+          <th>Country2</th>
+          <th>Date</th>
+          <th>Result</th>
+        </tr>
+        {% for mat in match_list %}
+         <tr>
+           <th>{{mat.country1}}</th>
+           <th>{{mat.country2}}</th>
+           <th>{{mat.date}}</th>
+           <th>{{mat.result}}</th>
+         </tr>
+         {% endfor %}
+        </table>
+        {% else %}
+             <p>no matches</p>
+    {% endif %}
+
+
+
+  </body>
+</html>
