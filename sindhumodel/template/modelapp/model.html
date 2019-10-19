@@ -3,10 +3,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="{%static "css/world.css" %}">
+    <link rel="stylesheet" href="{%static "css/World.css" %}">
   </head>
-  <body align ="center" class="model">
+  <body align ="center" >
+    <div class="main">
   <h1>WORLD CUP 2019 RESULT</h1>
   {% if match_list %}
       <table border='2' align="center">
@@ -29,7 +31,7 @@
              <p>no matches</p>
     {% endif %}
 
-
+</div>
 
   </body>
 </html>
